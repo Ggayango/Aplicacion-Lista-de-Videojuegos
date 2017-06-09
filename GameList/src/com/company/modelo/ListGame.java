@@ -55,7 +55,7 @@ public class ListGame {
 
         Scanner confirmacion = new Scanner(System.in);
 
-        System.out.println(" Quiere añadir u nuevo Vieojuego. ");
+        System.out.println(" Quiere añadir u nuevo Vieojuego SI/NO. ");
         String introducir = confirmacion.nextLine();
 
         String SI = "si";

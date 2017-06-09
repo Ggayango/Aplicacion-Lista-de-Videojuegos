@@ -40,29 +40,33 @@ public class GameListApp {
                     listGame.showGameList();
                     break;
                 case 3:
-                    listGame.ordenarGenero();
-                    break;
-                case 4:
-                    listGame.ordenarLanzamiento();
-                    break;
-                case 5:
-                    listGame.ordenarPegi();
-                    break;
-                case 6:
-                    listGame.ordenarPlataforma();
-                    break;
-                case 7:
-                    listGame.ordenarNombre();
-                    break;
-                case 8:
                     Game game = listGame.buscarGames();
                     System.out.println( game );
                     break;
-                case 9:
+                case 4:
                     listGame.deleteGames();
                     break;
-                case 10:
+                case 5:
                     listGame.editGames();
+                    break;
+                /**
+                 * Opciones de ordenacion
+                 */
+                case 6:
+                    listGame.ordenarNombre();
+                    break;
+                case 7:
+                    listGame.ordenarGenero();
+                    break;
+                case 8:
+                    listGame.ordenarLanzamiento();
+                    break;
+                case 9:
+                    listGame.ordenarPegi();
+                    break;
+                case 10:
+                    listGame.ordenarPlataforma();
+                    break;
             }
         }
     }
@@ -80,17 +84,23 @@ public class GameListApp {
         int option;
 
         System.out.println("*****************************************");
+        System.out.println("*                                       *");
         System.out.println("*   1 - Añadir Juego                    *");
         System.out.println("*   2 - Mostrar Juegos                  *");
-        System.out.println("*   3 - Ordenar Juegos por Genero       *");
-        System.out.println("*   4 - Ordenar Juegos por Lanzamiento  *");
-        System.out.println("*   5 - Ordenar Juegos por PEGI         *");
-        System.out.println("*   6 - Ordenar Juegos por Plataforma   *");
-        System.out.println("*   7 - Ordenar Juegos por Nombre       *");
-        System.out.println("*   8 - Buscar Videojuego               *");
-        System.out.println("*   9 - Eliminar Videojuego             *");
-        System.out.println("*  10 - EDITAR Videojuego               *");
+        System.out.println("*   3 - Buscar Videojuego               *");
+        System.out.println("*   4 - Eliminar Videojuego             *");
+        System.out.println("*   5 - EDITAR Videojuego               *");
+        System.out.println("*                                       *");
+        System.out.println("*          Tipos de Ordenacion          *");
+        System.out.println("*                                       *");
+        System.out.println("*   6 - Juegos por Nombre               *");
+        System.out.println("*   7 - Juegos por Genero               *");
+        System.out.println("*   8 - Juegos por Lanzamiento          *");
+        System.out.println("*   9 - Juegos por PEGI                 *");
+        System.out.println("*  10 - Juegos por Plataforma           *");
+        System.out.println("*                                       *");
         System.out.println("*   0 - Salir                           *");
+        System.out.println("*                                       *");
         System.out.println("*****************************************");
         System.out.println("Opción: ");
 
