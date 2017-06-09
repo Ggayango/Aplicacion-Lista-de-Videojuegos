@@ -1,4 +1,4 @@
-#Lista de VideoJuegos
+Lista de VideoJuegos
 
 La compañia "Valve Corporation" nos ha contratado para el desarrollo de una apicacion que sustituira a "Steam"
 en los proximos meses, ya que dicha aplicacion se les ha quedado anticuada y pretenden renovarla.
