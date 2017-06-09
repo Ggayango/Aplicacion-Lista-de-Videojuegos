@@ -34,7 +34,7 @@ public class GameListApp {
         while ((option = showMenu()) != 0) {
             switch (option) {
                 case 1:
-                    listGame.addGame(askGame());
+                    listGame.addGame();
                     break;
                 case 2:
                     listGame.showGameList();
@@ -61,76 +61,9 @@ public class GameListApp {
                 case 9:
                     listGame.deleteGames();
                     break;
+                case 10:
+                    listGame.editGames();
             }
-        }
-    }
-
-    /**
-     * El metodo askGame() nos pregunta sobre el videojuego que queramos
-     * çañadir y sus diferentes campos.
-     *
-     * Di cho metodo tiene un funcion try/catch para prevenir que no se puedan
-     * introducir letras u otro carateres no deseados que pueden llevar a error la aplicacion.
-     *
-     * en dicho metodo tambien tiene una llamada al metodo saveGames() el cual guarda cada juego introducido
-     * para prevenir la perdida de informacion.
-     * @return
-     */
-
-
-    private Game askGame() {
-        Scanner scanner = new Scanner(System.in);
-        String nombre, genero, desarrollador, plataforma;
-        int lanzamiento, jugadores, pegi;
-
-        try {
-
-            do {
-                System.out.println("Videojuego: ");
-                nombre = scanner.nextLine().trim().replaceAll("\\s+", " ");
-            } while (nombre.equals(""));
-
-            do {
-                System.out.println("Genero: ");
-                genero = scanner.nextLine().trim().replaceAll("\\s+", " ");
-            } while (genero.equals(""));
-
-            do {
-                System.out.println("DesarroLladora: ");
-                desarrollador = scanner.nextLine().trim().replaceAll("\\s+", " ");
-            } while (desarrollador.equals(""));
-
-            do {
-                System.out.println("Año de Lanzamiento: ");
-                lanzamiento = scanner.nextInt();
-            } while (lanzamiento <= 1950 && lanzamiento >= 3000);
-
-            do {
-                System.out.println("Numero de Jugadores");
-                jugadores = scanner.nextInt();
-            } while (jugadores == 0);
-
-            do {
-                System.out.println("PEGI:");
-
-                pegi = scanner.nextInt();
-            } while (pegi != 3 && pegi != 7 && pegi != 12 && pegi != 16 && pegi != 18);
-
-            do {
-                scanner.nextLine();
-                System.out.println("Plataforma:");
-                plataforma = scanner.nextLine().trim().replaceAll("\\s+", " ");
-
-            } while (plataforma.equals(""));
-
-
-
-            listGame.saveGames();
-
-            return new Game(nombre, genero, desarrollador, lanzamiento, plataforma, jugadores, pegi);
-        }catch ( InputMismatchException e){
-            System.out.println("No has introducido un numero");
-            return null;
         }
     }
 
@@ -156,6 +89,7 @@ public class GameListApp {
         System.out.println("*   7 - Ordenar Juegos por Nombre       *");
         System.out.println("*   8 - Buscar Videojuego               *");
         System.out.println("*   9 - Eliminar Videojuego             *");
+        System.out.println("*  10 - EDITAR Videojuego               *");
         System.out.println("*   0 - Salir                           *");
         System.out.println("*****************************************");
         System.out.println("Opción: ");

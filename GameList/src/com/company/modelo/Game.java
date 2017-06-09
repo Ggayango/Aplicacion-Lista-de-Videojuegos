@@ -2,9 +2,7 @@ package com.company.modelo;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Created by Guille on 22/05/2017.
@@ -129,7 +127,9 @@ public class Game implements Comparable<Game>,Comparator<Game>,Serializable {
     //parametros de tipo String
 
     /**
-     * Los Getters y los Setters de las variables inicializadas al inicio de la clase.
+     * Los Getters y los Setters de las variables inicializadas al inicio de la clase
+     * y en las variables de tipo Strin tienen implementado una exepcion llamada
+     * CadenaVacia.
      * @return
      */
 
@@ -290,8 +290,8 @@ public class Game implements Comparable<Game>,Comparator<Game>,Serializable {
 
 /**
  * Excepcion para controloar que el usuario no introduzca una cadena
- * este metodo esta implemetado pero no tendria ningun efecto
- * ya que controlo ento en la clase GameListApp con cada uno de los parametros.
+ * este metodo esta implemetado en los setters de las variables esto tambien se controla
+ * en la clase GameListApp en el metodo askGame() con cada uno de los parametros.
  *
  */
 
