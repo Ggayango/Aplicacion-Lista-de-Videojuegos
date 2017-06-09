@@ -1,8 +1,7 @@
 package com.company.controlador;
+
 import com.company.modelo.Game;
 import com.company.modelo.ListGame;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -100,7 +99,7 @@ public class GameListApp {
         System.out.println("*  10 - Juegos por Plataforma           *");
         System.out.println("*                                       *");
         System.out.println("*   0 - Salir                           *");
-        System.out.println("*                                       *");
+        System.out.println("                                         ");
         System.out.println("*****************************************");
         System.out.println("Opción: ");
 
@@ -108,5 +107,4 @@ public class GameListApp {
 
         return option;
     }
-
 }
