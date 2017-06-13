@@ -40,7 +40,11 @@ public class GameListApp {
                     break;
                 case 3:
                     Game game = listGame.buscarGames();
-                    System.out.println( game );
+                    if ( game == null){
+                        System.out.println("Videojuego no encontrado");
+                    }else {
+                        System.out.println( game );
+                    }
                     break;
                 case 4:
                     listGame.deleteGames();
@@ -98,8 +102,9 @@ public class GameListApp {
         System.out.println("*   9 - Juegos por PEGI                 *");
         System.out.println("*  10 - Juegos por Plataforma           *");
         System.out.println("*                                       *");
-        System.out.println("*   0 - Salir                           *");
-        System.out.println("                                         ");
+        System.out.println("*   0 - Para Salir de cualquier         *");
+        System.out.println("*       opcion selecionada              *");
+        System.out.println("*                                       *");
         System.out.println("*****************************************");
         System.out.println("Opción: ");
 

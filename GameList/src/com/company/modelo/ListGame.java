@@ -48,20 +48,10 @@ public class ListGame {
      * @return
      */
 
-    public Game askGame(){
+    public  Game askGame(){
         Scanner scanner = new Scanner(System.in);
         String nombre, genero, desarrollador, plataforma;
         int lanzamiento, jugadores, pegi;
-
-        Scanner confirmacion = new Scanner(System.in);
-
-        System.out.println(" Quiere añadir u nuevo Vieojuego SI/NO. ");
-        String introducir = confirmacion.nextLine();
-
-        String SI = "si";
-        String NO = "no";
-
-        if (introducir.equalsIgnoreCase(SI)) {
 
             try {
 
@@ -109,9 +99,6 @@ public class ListGame {
                 System.out.println("No has introducido un numero");
 
             }
-        }else if (introducir.equalsIgnoreCase(NO)){
-            System.out.println(" Añadir Viideojuego CANCELADA. ");
-        }
         return null;
     }
 
@@ -193,7 +180,6 @@ public class ListGame {
         if (  index != -1 ){
             return games.get( index );
         }
-        System.out.println("Videojuego no encontrado");
         return null;
     }
 
@@ -204,7 +190,7 @@ public class ListGame {
      * Si el juego no se encuentra saltaun mensaje.
      */
 
-    public  void deleteGames(){
+    public void deleteGames(){
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Introduzca el nombre del Videojuego que desea ELIMINAR. ");
         String nombre = scanner.nextLine();
@@ -223,11 +209,11 @@ public class ListGame {
                 games.get(index);
                 games.remove(index);
                 System.out.println(" Videojuego ELIMINADO");
+                saveGames();
             }else if (eliminar.equalsIgnoreCase(NO)){
                 System.out.println(" Operacion cancelada");
             }
         }
-        saveGames();
     }
 
     /**
@@ -259,7 +245,6 @@ public class ListGame {
                 System.out.println(" Operacion cancelada");
             }
         }
-        saveGames();
     }
 
 
